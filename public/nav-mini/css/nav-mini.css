@@ -1,0 +1,40 @@
+.nav-main-open-mini {
+    display: block;
+}
+.nav-main-close-mini {
+    display: none;
+}
+.nav-main-mini {
+    position : fixed;
+    z-index: 50;
+    background : #0e0d0d40;
+
+}
+
+.nav-main-mini.mini-close {
+    height : auto;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+
+.nav-main-mini.mini-open {
+    height : 100%;
+    padding: 10px;
+
+}
+
+.nav-main-mini li {
+    list-style-type: none;
+}
+.nav-main-mini a {
+    display: block;
+    width: 100%;
+    color : white;
+}
+
+.nav-open-mini {
+    display : inline-block;
+}
+.nav-close-mini {
+    display : none;
+}
