@@ -1,7 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
-const homeRoutes = require('./routes/homeRoutes');
+const Routes = require('./routes/Routes');
 
 
 // const blogRoutes = require('./routes/blogRoutes');
@@ -36,17 +36,16 @@ app.use((req, res, next) => {
 
 // routes
 // home routes
-app.use('/', homeRoutes);
+app.use('/', Routes);
 // app.get('/', (req, res) => {
-//     res.render('home/index', { dummy : 'home'});
+  //     res.render('home/index', { dummy : 'home'});
+  // });
+  //test routes
+  app.use('/test', Routes);
+// app.get('/test', (req, res) => {
+//     res.render('test/index', { dummy : 'test'});
 // });
-app.get('/test', (req, res) => {
-    res.render('test/index', { dummy : 'test'});
-});
 
-// app.get('/about', (req, res) => {
-//   res.render('about', { title: 'About' });
-// });
 
 // // blog routes
 // app.use('/blogs', blogRoutes);

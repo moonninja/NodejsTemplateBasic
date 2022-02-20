@@ -23,6 +23,11 @@
 
 }
 
+ul.mini-collapse {
+    margin : 0;
+}
+
+
 .nav-main-mini li {
     list-style-type: none;
 }
@@ -38,3 +43,31 @@
 .nav-close-mini {
     display : none;
 }
+
+.mini-collapse:not(mini-show) {
+    display : none;
+}
+.mini-collapse.mini-show {
+    display : block;
+    position: relative;
+}
+
+ul.mini-show:before {
+    content: '';
+    height: 100%;
+    opacity: 1;
+    width: 3px;
+    background: #e0f3ff;
+    position: absolute; /* to only display in parent container parent ul must have position set to relative, then this position set to absolute will work */
+    left: 20px;
+    top: 0;
+    border-radius: 15px;
+}
+
+.navitem-mini {
+    margin : 3px;
+}
+ul.mini-collapse > li {
+    margin : 3px;
+}
+

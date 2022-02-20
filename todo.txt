@@ -1,2 +1,1 @@
-2.Test as if new pc
-3.Finish group items line and show/display
+1.Start with react template

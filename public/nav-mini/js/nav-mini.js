@@ -46,6 +46,19 @@ $(".nav-close-mini").on('click', function (event) {
     localStorage.setItem("nav-mini", "close");
 });
 
+$(".navgroup-control-mini").on('click', function (event) {
+    event.stopPropagation();
+    event.stopImmediatePropagation();
+
+    var navgroupcontrol = $(this)[0];
+    var ul = $(navgroupcontrol).next("ul")[0];
+    if(!$(ul).hasClass("mini-show"))
+        $(ul).addClass("mini-show")
+        else
+        $(ul).removeClass("mini-show")
+    debugger
+});
+
 let NavControl = () => {
     if (localStorage.getItem("nav-mini") == "open")
     {
@@ -57,7 +70,6 @@ let NavControl = () => {
         setNavClose();
     }
 
-    debugger
 }
 
 let setNavOpen = () => {
